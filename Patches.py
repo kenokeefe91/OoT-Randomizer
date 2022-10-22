@@ -821,6 +821,28 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
     rom.write_byte(0xB6D3D3, 0x00) # Gerudo Training Ground
     rom.write_byte(0xB6D42B, 0x00) # Inside Ganon's Castle
 
+    # Allow Farore's Wind in every overworld area
+    rom.write_int32(0xB6D2B0, 0x51000000) # Hyrule Field
+    rom.write_int32(0xB6D2B4, 0x52000000) # Kakariko Village
+    rom.write_int32(0xB6D2B8, 0x53000010) # Graveyard
+    rom.write_int32(0xB6D2BC, 0x54000010) # Zora's River
+    rom.write_int32(0xB6D2C0, 0x55000000) # Kokiri Forest
+    rom.write_int32(0xB6D2C4, 0x56000000) # Sacred Forest Meadow
+    rom.write_int32(0xB6D2C8, 0x57000000) # Lake Hylia
+    rom.write_int32(0xB6D2CC, 0x58000000) # Zora's Domain
+    rom.write_int32(0xB6D2D0, 0x59000000) # Zora's Fountain
+    rom.write_int32(0xB6D2D4, 0x5a000000) # Gerudo Valley
+    rom.write_int32(0xB6D2D8, 0x5b000000) # Lost Woods
+    rom.write_int32(0xB6D2DC, 0x5c000000) # Desert Colossus
+    rom.write_int32(0xB6D2E0, 0x5d000000) # Gerudo's Fortress
+    rom.write_int32(0xB6D2E4, 0x5e000000) # Haunted Wasteland
+    rom.write_int32(0xB6D2E8, 0x5f000000) # Hyrule Castle
+    rom.write_int32(0xB6D2EC, 0x64000000) # Ganon's Castle Exterior
+    rom.write_int32(0xB6D2F0, 0x60000000) # Death Mountain Trail
+    rom.write_int32(0xB6D2F4, 0x61000000) # Death Mountain Crater
+    rom.write_int32(0xB6D2F8, 0x62000000) # Goron City
+    rom.write_int32(0xB6D2FC, 0x63000000) # Lon Lon Ranch
+
     # Remove disruptive text from Gerudo Training Ground and early Shadow Temple (vanilla)
     Wonder_text = [0x27C00BC, 0x27C00CC, 0x27C00DC, 0x27C00EC, 0x27C00FC, 0x27C010C, 0x27C011C, 0x27C012C, 0x27CE080,
                    0x27CE090, 0x2887070, 0x2887080, 0x2887090, 0x2897070, 0x28C7134, 0x28D91BC, 0x28A60F4, 0x28AE084,

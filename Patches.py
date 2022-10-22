@@ -824,8 +824,8 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
     # Allow Farore's Wind in every overworld area
     rom.write_int32(0xB6D2B0, 0x51000000) # Hyrule Field
     rom.write_int32(0xB6D2B4, 0x52000000) # Kakariko Village
-    rom.write_int32(0xB6D2B8, 0x53000010) # Graveyard
-    rom.write_int32(0xB6D2BC, 0x54000010) # Zora's River
+    rom.write_int32(0xB6D2B8, 0x53000000) # Graveyard
+    rom.write_int32(0xB6D2BC, 0x54000000) # Zora's River
     rom.write_int32(0xB6D2C0, 0x55000000) # Kokiri Forest
     rom.write_int32(0xB6D2C4, 0x56000000) # Sacred Forest Meadow
     rom.write_int32(0xB6D2C8, 0x57000000) # Lake Hylia

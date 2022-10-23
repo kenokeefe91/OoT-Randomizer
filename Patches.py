@@ -842,7 +842,19 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
     rom.write_int32(0xB6D2F4, 0x61000000) # Death Mountain Crater
     rom.write_int32(0xB6D2F8, 0x62000000) # Goron City
     rom.write_int32(0xB6D2FC, 0x63000000) # Lon Lon Ranch
+    rom.write_int32(0xB6D354, 0x1C001000) # Market entrance - child night
+    rom.write_int32(0xB6D358, 0x1D001000) # Market entrance (ruins)
+    rom.write_int32(0xB6D350, 0x1B001000) # Market entrance - child day
+    rom.write_int32(0xB6D35C, 0x20001000) # Market Child - day
+    rom.write_int32(0xB6D360, 0x21001000) # Market Child - night
 
+    rom.write_int32(0xB6D364, 0x22001000) # Market (Ruins)
+    rom.write_int32(0xB6D368, 0x1e001000) # Back Alley (Child - Day)    
+    rom.write_int32(0xb6d36c, 0x1f001000) # Back Alley (Child - Night)
+    rom.write_int32(0xB6D370, 0x23001000) # Temple of Time Exterior (Child - Day)
+    rom.write_int32(0xB6D374, 0x24001000) # Temple of Time Exterior (Child - Night)
+    rom.write_int32(0xB6D378, 0x25001000) # Temple of Time Exterior (Ruins)
+    
     # Remove disruptive text from Gerudo Training Ground and early Shadow Temple (vanilla)
     Wonder_text = [0x27C00BC, 0x27C00CC, 0x27C00DC, 0x27C00EC, 0x27C00FC, 0x27C010C, 0x27C011C, 0x27C012C, 0x27CE080,
                    0x27CE090, 0x2887070, 0x2887080, 0x2887090, 0x2897070, 0x28C7134, 0x28D91BC, 0x28A60F4, 0x28AE084,

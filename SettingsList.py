@@ -5878,19 +5878,16 @@ setting_infos = [
     ),
     Checkbutton(
         name           = 'farore_everywhere',
-        gui_text       = 'Farore everywhere',
+        gui_text       = "Farore's Wind Anywhere",
         gui_tooltip    = '''\
-            Allow you to cast Farore's wind
-            in every overworld area (no interiors)
-            in addition to dungeons.
+            Allows you to cast Farore's Wind
+            in every overworld area in addition
+            to dungeons (but not indoors).
 
-            To prevent from some bugs Farore's wind
-            stay disable in market areas child and adult,
-            this include
-            - Market Entrance
-            - Market
-            - Back Alley
-            - Temple of time entrance
+            For technical reasons, Farore's Wind stays
+            disabled in the market, including the
+            market entrance, the back alley, and the
+            Temple of Time entrance.
         ''',
         default        = False,
         shared         = True,

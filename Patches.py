@@ -817,11 +817,12 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
     rom.write_int32(0xC7BAEC, 0x00000000)
     rom.write_int32(0xc7BCA4, 0x00000000)
 
-    # Allow Farore's Wind in dungeons where it's normally forbidden
-    rom.write_byte(0xB6D3D3, 0x00) # Gerudo Training Ground
-    rom.write_byte(0xB6D42B, 0x00) # Inside Ganon's Castle
+    if 'side_dungeons' in world.settings.farore_behavior:
+        # Allow Farore's Wind in dungeons where it's normally forbidden
+        rom.write_byte(0xB6D3D3, 0x00) # Gerudo Training Ground
+        rom.write_byte(0xB6D42B, 0x00) # Inside Ganon's Castle
 
-    if world.settings.farore_everywhere:
+    if 'all_overworld' in world.settings.farore_behavior:
         # Allow Farore's Wind in every overworld area
         rom.write_int32(0xB6D2B0, 0x51000000) # Hyrule Field
         rom.write_int32(0xB6D2B4, 0x52000000) # Kakariko Village

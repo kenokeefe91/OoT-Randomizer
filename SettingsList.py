@@ -5876,22 +5876,33 @@ setting_infos = [
         default        = False,
         shared         = True,
     ),
-    Checkbutton(
-        name           = 'farore_everywhere',
-        gui_text       = "Farore's Wind Anywhere",
-        gui_tooltip    = '''\
-            Allows you to cast Farore's Wind
-            in every overworld area in addition
-            to dungeons (but not indoors).
+    Combobox(
+        name            = 'farore_behavior',
+        multiple_select = True,
+        gui_text        = "Farore's Wind Behavior",
+        choices         = {
+            'side_dungeons':    "Side dungeons",
+            'all_overworld':    "Overworld"
+        },
+        default        = ['side_dungeons'],
+        gui_tooltip     = '''\
+            <strong>Side dungeons:</strong> 
+                Allow Farore's Wind in dungeons where it's normally forbidden
+                <i>Gerudo Training Ground</i>
+                <i>Inside Ganon's Castle</i>
+            
+            <strong>Overworld:</strong>
+                Allows you to cast Farore's Wind
+                in every overworld area in addition
+                to dungeons (but not indoors).
 
-            For technical reasons, Farore's Wind stays
-            disabled in the market, including the
-            market entrance, the back alley, and the
-            Temple of Time entrance.
+                For technical reasons, Farore's Wind stays
+                disabled in the market, including the
+                market entrance, the back alley, and the
+                Temple of Time entrance.
         ''',
-        default        = False,
-        shared         = True,
-    ),
+        shared         = True
+    )
 ]
 
 
